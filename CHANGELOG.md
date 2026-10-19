@@ -8,6 +8,8 @@ exception: while the project is below `1.0.0`, breaking changes bump the
 **minor** version, and they are called out as such.
 
 ## [Unreleased]
+- **`refund-policy-vdf` (issue #640): assert fallback dispute event shapes/topics and exactly-once settlement.**
+  Test-only coverage in `contracts/refund-policy-vdf/src/fallback.rs` now pins the exact XDR topics/payloads for `FallbackDisputeRequestedEvent` and `FallbackDisputeSettledEvent`, verifies both refund outcomes, and confirms a repeated settlement attempt emits no second settlement event. Production contract behavior is unchanged.
 - **`refund-vault` (issue #620): per-strategy approval key semantics pinned by
   tests.** New `per_strategy_approval_key` module in
   `contracts/refund-vault/src/strategy_tests.rs` approves two strategies,
