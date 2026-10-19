@@ -1404,5 +1404,7 @@ the transactions that created them are recorded in
 [0.2.0]: https://github.com/accensa/accensa-contracts/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/accensa/accensa-contracts/releases/tag/v0.1.0
 
+
 ## [Unreleased]
 - Fixed issues
+  - **`state-channel` (issue #636): pin dispute, counter-evidence, finalization and claim event shapes.** Added test-only assertions comparing exact XDR topic tuples and payloads, including challenge-window rejection paths that publish no events. No production behavior change.
